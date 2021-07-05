@@ -1,0 +1,14 @@
+{:paths ["src"]
+ :deps {org.clojure/clojurescript {:mvn/version "1.10.773"}}
+ :aliases {:lib-build {:extra-deps {com.bhauman/figwheel-main {:mvn/version "0.2.13"}}
+                       :main-opts ["-m" "figwheel.main"
+                                   "-O" "advanced"
+                                   "--build-once" "lib"]}
+           :demo {:extra-deps {com.bhauman/figwheel-main {:mvn/version "0.2.13"}
+                               lilactown/helix {:mvn/version "0.1.1"}}
+                  :extra-paths ["target"]}
+           :demo-build {:main-opts ["-m" "figwheel.main"
+                                    "-O" "advanced"
+                                    "--build-once" "demo-build"]}
+           :demo-repl {:main-opts ["-m" "figwheel.main"
+                                   "--build" "demo-repl" "--repl"]}}}

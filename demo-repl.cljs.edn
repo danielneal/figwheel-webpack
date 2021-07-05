@@ -1,0 +1,7 @@
+{:main "fw.demo"
+ :target :bundle
+ :clean-outputs true
+ :optimizations :none
+ :bundle-cmd {:none ["npx" "webpack" "--mode=development" "--entry" :output-to 
+                     "--output-path" :final-output-dir
+		     "--output-filename" :final-output-filename]}}

@@ -1,0 +1,10 @@
+{:main "fw.lib"
+ :target :bundle
+ :clean-outputs true
+ :optimizations :advanced
+ :aot-cache false
+ :output-dir "resources/js"
+ :output-to "resources/js/lib.js"
+ :bundle-cmd {:none ["npx" "webpack" "--mode=development" "--entry" :output-to
+                     "--output-path" :final-output-dir
+		     "--output-filename" :final-output-filename]}}
